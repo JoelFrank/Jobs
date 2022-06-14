@@ -29,10 +29,12 @@ void printarVetor(TItem *A,int tamanho_vetor){
 TItem * gerarCaracteriticas(int tamanho_vetor){
     //Gera as características solicitadas de um array de ítens
     TItem *A = (TItem *)malloc(sizeof(TItem)*tamanho_vetor);//Malloc com o tamanho informado nos parâmetros do argv
-    arranjos_ordenados(A,tamanho_vetor);
+    //>>Aqui voce escolhe um tipo de arranjo:
+    
+    //arranjos_ordenados(A,tamanho_vetor);
     //inversamente_ordenados(A,tamanho_vetor);
     //quase_ordenados(A,tamanho_vetor);
-    //vetor_aleatorio(A,tamanho_vetor);
+    vetor_aleatorio(A,tamanho_vetor);
     return A;
 }
 
