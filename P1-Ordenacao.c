@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <sys/time.h>   // for gettimeofday()
+#include <sys/time.h>
 /************************************************
 AAED | Analise de Algoritmos e Estruturas de Dados
 Aluno: Joel Frank Huarayo Quispe
