@@ -293,8 +293,9 @@ void ShellSort(TItem *A, int n){
 }
 
 int main(){
-  struct timeval start, end; 
-	puts("----- Sorting-----");
+    clock_t inicio,fim;
+    int tamanho_vetor;
+    puts("----- Sorting-----");
     //Considere arranjos (vetores) com diferentes quantidades de elementos
     //(10, 100, 1.000, 10.000,100.000, 1.000.000).
     //int tamanho_vetor=10;    
@@ -312,16 +313,15 @@ int main(){
     items = gerarCaracteriticas(tamanho_vetor);
 
     printf("Unsorted: ");
-    printf("Já gerou o arranjo\n");
+    printf("Ya genero el arreglo\n");
     printarVetor(items,tamanho_vetor);
 
 
-    gettimeofday(&start, NULL);
+    inicio=clock();
     ShellSort(items,tamanho_vetor);//Metodo de Ordenacao
-    gettimeofday(&end, NULL);
-    long seconds = (end.tv_sec - start.tv_sec);
-    long micros = ((seconds * 1000000) + end.tv_usec) - (start.tv_usec); 
-    printf("O tempo decorrido é %d microssegundos\n", micros);
+    fim=clock();
+    double time_insertion = (double)(((double)fim-(double)inicio)/CLOCKS_PER_SEC);
+    printf(">>>Tempo de Shellsort = %3.3f segundos\n",time_insertion); 
 
 
     //Insercao(items,tamanho_vetor);//Metodo de Ordenacao
