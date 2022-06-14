@@ -302,18 +302,18 @@ int main(){
     //int tamanho_vetor=1000;
     //int tamanho_vetor=10000;
     //int tamanho_vetor=100000;
-    int tamanho_vetor=1000000;
+    //int tamanho_vetor=1000000;
     
-    //printf("Digite o valor de n: ");
-    //scanf("%d", &tamanho_vetor);
+    printf("Digite o valor de n: ");
+    scanf("%d", &tamanho_vetor);
     
     TItem * gerarCaracteriticas(tamanho_vetor);
     TItem *items;
     items = gerarCaracteriticas(tamanho_vetor);
 
     printf("Unsorted: ");
-    printf("Ya genero el arreglo\n");
-    //printarVetor(items,tamanho_vetor);
+    printf("Já gerou o arranjo\n");
+    printarVetor(items,tamanho_vetor);
 
 
     gettimeofday(&start, NULL);
@@ -321,7 +321,7 @@ int main(){
     gettimeofday(&end, NULL);
     long seconds = (end.tv_sec - start.tv_sec);
     long micros = ((seconds * 1000000) + end.tv_usec) - (start.tv_usec); 
-    printf("El tiempo transcurrido es de %d microsegundos\n", micros);
+    printf("O tempo decorrido é %d microssegundos\n", micros);
 
 
     //Insercao(items,tamanho_vetor);//Metodo de Ordenacao
@@ -331,8 +331,8 @@ int main(){
     //MergeSort(items,tamanho_vetor);//Metodo de Ordenacao
     //QuickSort(items,tamanho_vetor);//Metodo de Ordenacao
 
-    //printf("Sorted: ");
-    //printarVetor(items,tamanho_vetor);
+    printf("Sorted: ");
+    printarVetor(items,tamanho_vetor);
 
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
